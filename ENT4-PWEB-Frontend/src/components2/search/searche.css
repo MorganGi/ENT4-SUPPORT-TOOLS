@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+}
+.formSearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.input-search {
+  height: 30px;
+  width: 30px;
+  border-style: none;
+  /* padding: 5px; */
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0);
+  /* padding-right: 40px; */
+  color: black;
+}
+.input-search::placeholder {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  letter-spacing: 2px;
+
+  background-color: white;
+  border: 12px white solid;
+}
+.btn-search {
+  width: 30px;
+  height: 30px;
+  border-style: 1px;
+  border: 1px solid;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: white;
+  pointer-events: painted;
+  background: url("loupe.jpg") no-repeat;
+  background-size: contain;
+  border: 1px solid black;
+}
+
+.btn-search:focus ~ .input-search {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.input-search:focus {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.btn-search-update {
+  width: 30px;
+  height: 30px;
+  border-style: none;
+  border: 1px solid black;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: white;
+  background-color: white;
+  pointer-events: painted;
+  background: url("update.png") no-repeat;
+  background-size: contain;
+}
+
+.btn-search-update:focus ~ .input-search {
+  width: 300px;
+  border-radius: 0px;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.input-search-update:focus {
+  width: 300px;
+  border-radius: 0px;
+  background-color: white;
+  border-bottom: 1px solid rgb(2, 6, 247);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.btn-search-create {
+  width: 30px;
+  height: 30px;
+  border-style: none;
+  border: 1px solid black;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 100%;
+  position: absolute;
+  right: 0px;
+  color: white;
+  background-color: white;
+  pointer-events: painted;
+  background: url("plus.png") no-repeat;
+  background-size: contain;
+}
+
+.btn-search-create:focus ~ .input-search {
+  width: 300px;
+  border-radius: 0px;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.input-search-create:focus {
+  width: 300px;
+  border-radius: 0px;
+  background-color: white;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.btn-search-delete {
+  width: 30px;
+  height: 30px;
+  border-style: none;
+  font-size: 10px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20%;
+  border: 1px solid black;
+  position: absolute;
+  right: 0px;
+  color: #000000;
+  background-color: white;
+  pointer-events: painted;
+  background: url("delete.png") no-repeat;
+  background-size: contain;
+}
+
+.btn-search-delete:focus ~ .input-search {
+  width: 200px;
+  border-radius: 0px;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.1, 1);
+}
+.input-search-delete:focus {
+  width: 200px;
+  border-radius: 0px;
+  background-color: white;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.1, 1);
+}
+
+.res-of-search {
+  border: 1px solid #aaa;
+  margin: 0.4em 1rem;
+  padding: 0.4rem;
+  background-color: #ffffff;
+}
+
+.chargement {
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  border-radius: 50px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.mainDiv-search {
+  margin-bottom: 25px;
+}
+
+.button-article:focus {
+  background-color: rgb(180, 255, 180);
+}

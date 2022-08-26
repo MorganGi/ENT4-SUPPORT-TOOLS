@@ -1,0 +1,44 @@
+version: "2.1"
+services:
+  react-container:
+    build:
+      context: ./ENT4-PWEB-Frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./ENT4-PWEB-Frontend/:/app/client #PERMET DE MODIFIER LES FICHIER SANS REBUILD DOCKER
+    ports:
+      - 3021:3021
+    container_name: react-container
+    command: npm start
+
+  node-container:
+    build:
+      context: ./ENT4-PWEB-Backend/
+      dockerfile: Dockerfile
+    volumes:
+      - ./ENT4-PWEB-Frontend/public/pdf:/app/server/pdf/
+      - ./ENT4-PWEB-Backend:/app/server #PERMET DE MODIFIER LES FICHIER SANS REBUILD DOCKER
+    ports:
+      - 3020:3020
+    container_name: node-container
+    command: npm start
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mariadb:10.7
+    restart: always
+    container_name: db-container
+    volumes:
+      - ./ENT4-PWEB-Backend/db/init:/docker-entrypoint-initdb.d
+      - ./ENT4-PWEB-Backend/db/data:/var/lib/mysql #RENDRE LA DB PERSISTANTE
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_HOST: node-container
+      MYSQL_PASSWORD: password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 1s
+      retries: 5

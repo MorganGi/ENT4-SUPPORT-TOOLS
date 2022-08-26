@@ -1,0 +1,127 @@
+.wisper {
+  display: flex;
+  justify-content: center;
+}
+body {
+  background-color: white;
+}
+
+.xivo-cebox {
+  display: flex;
+  justify-content: space-around;
+}
+.flex-container {
+  display: flex;
+  margin: 10px;
+}
+
+.flex-gauche {
+  width: 50%;
+  height: 800px;
+}
+.flex-droit {
+  width: 50%;
+  height: 800px;
+}
+.parallax-callcenter {
+  /* The image used */
+  background-image: url("./wipser-linkedin.jpg");
+
+  /* Set a specific height */
+  min-height: max-content;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax-wisper {
+  /* The image used */
+  background-image: url("./wisper.png");
+
+  /* Set a specific height */
+  min-height: 800px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: 20% 40%;
+  background-repeat: no-repeat;
+}
+
+.parallax-cebox {
+  /* The image used */
+  background-image: url("./cebox.svg");
+
+  /* Set a specific height */
+  min-height: 800px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: 20% 70%;
+  background-repeat: no-repeat;
+}
+.parallax-xivo {
+  /* The image used */
+  background-image: url("./xivo.svg");
+
+  /* Set a specific height */
+  min-height: 800px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: 80% 60%;
+  background-repeat: no-repeat;
+}
+
+.text-wisper {
+  background-color: white;
+  text-align: center;
+  vertical-align: baseline;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 7px rgb(13, 78, 255);
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 50px;
+  font-size: large;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.text-xivo {
+  background-color: white;
+  text-align: center;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: -5px 5px 5px 7px rgb(255, 122, 13);
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 50px;
+  font-size: xx-large;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.text-cebox {
+  background-color: white;
+  text-align: center;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 7px rgb(46, 190, 89);
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 50px;
+  font-size: xx-large;
+  text-align: justify;
+  text-justify: inter-word;
+}

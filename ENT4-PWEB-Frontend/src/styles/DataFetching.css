@@ -1,0 +1,424 @@
+/* CSS XIVO  */
+
+.xivo-master {
+  background-color: #f1f1f1;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  min-height: 90vh;
+  background-image: url("./xivo.svg");
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: right;
+}
+
+.xivo-faq-list-pb {
+  margin: 5px;
+  padding: 0px;
+  width: 49%;
+}
+
+.xivo-faq-list-pb2 {
+  float: left;
+  margin: 15px 5px 0px 20px;
+  border-radius: 10px;
+}
+
+.xivo-mainpb {
+  padding-left: 20px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border: 1px #ff5722 solid;
+  margin-left: 16px;
+  background-color: white;
+  /* border-radius: 15px; */
+  box-shadow: 7px 5px 5px #ff5722;
+}
+
+.xivo-mainpbFilter {
+  margin-top: 50px;
+  padding-top: 5px;
+  border: 1px #ff5722 solid;
+  margin-left: 16px;
+  background-color: white;
+}
+
+.xivo-mains1Filter {
+  margin-top: 15px;
+  padding-top: 5px;
+  margin-left: 25%;
+  border: 1px #ff5722 solid;
+  background-color: white;
+}
+.xivo-mainpbFilter::placeholder {
+  color: rgb(167, 167, 167);
+  text-align: center;
+}
+
+.xivo-mains1Filter::placeholder {
+  color: rgb(167, 167, 167);
+  text-align: center;
+}
+
+.xivo-titlePb {
+  vertical-align: baseline;
+}
+
+.xivo-container-pb {
+  position: relative;
+  top: 10px;
+}
+
+.xivo-container-pb .xivo-main_crud {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  margin-left: 0%;
+}
+
+.xivo-container-s1 {
+  display: inline;
+  padding-left: 25%;
+}
+
+.xivo-container-s1 .xivo-main_crud {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  margin-left: 25%;
+}
+
+.xivo-container-s2 {
+  display: inline;
+  padding-left: 50%;
+}
+
+.xivo-container-s2 .xivo-main_crud {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  margin-left: 50%;
+}
+
+.xivo-button-title-pb {
+  text-decoration: none;
+  border: none;
+  background-color: white;
+}
+
+.xivo-button-title-pb:active {
+  background-color: rgb(255, 131, 100);
+}
+
+.xivo-fleche {
+  position: relative;
+  top: 13px;
+  background: url("Aroow.png") no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.xivo-fleche:active {
+  background-color: rgb(255, 131, 100);
+  border-radius: 25px;
+}
+
+.xivo-ecrou {
+  position: relative;
+  top: 13px;
+  background: url("ecrou.png") no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+}
+
+::placeholder {
+  color: white;
+  font-size: 1.5em;
+}
+
+.xivo-add {
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-size: small;
+}
+
+.xivo-solution {
+  padding-top: 25px;
+}
+
+.xivo-position-pdf {
+  position: absolute;
+  top: 163px;
+  left: 50%;
+  right: 15px;
+  bottom: 10px;
+}
+
+.xivo-main-create {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.xivo-file-size {
+  color: red;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.xivo-formUpload {
+  display: flex;
+}
+
+.xivo-inputUpload {
+  max-width: 70%;
+  color: black;
+  background-color: wheat;
+  border-radius: 10px;
+}
+
+.xivo-submitUpload {
+  background-color: wheat;
+  border-left: 1px solid black;
+  border-radius: 10px;
+}
+
+.logopdf {
+  margin: 75px 0px 0px 0px;
+  padding: 0px 0px 0px 25%;
+  width: 100%;
+}
+/* FIN CSS XIVO  */
+
+/* CSS CEBOX  */
+
+.cebox-master {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  min-height: 90vh;
+  background-color: #f1f1f1;
+  background-image: url("./cebox.svg");
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: right;
+}
+
+.cebox-faq-list-pb {
+  margin: 5px;
+  padding: 0px;
+  width: 50%;
+}
+
+.cebox-faq-list-pb2 {
+  float: left;
+  margin: 15px 5px 0px 20px;
+  border-radius: 10px;
+}
+
+.cebox-mainpb {
+  padding-left: 20px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border: 1px #a6ff94 solid;
+  margin-left: 16px;
+  background-color: white;
+  /* border-radius: 15px; */
+  box-shadow: 7px 5px 5px rgb(30, 177, 30);
+}
+
+.cebox-mainpbFilter {
+  margin-top: 50px;
+  padding-top: 5px;
+  border: 1px #a6ff94 solid;
+  margin-left: 16px;
+  background-color: white;
+}
+
+.cebox-mains1Filter {
+  margin-top: 15px;
+  padding-top: 5px;
+  margin-left: 25%;
+  border: 1px #06b300 solid;
+  background-color: white;
+}
+
+.cebox-mainpbFilter::placeholder {
+  color: rgb(167, 167, 167);
+  text-align: center;
+}
+.cebox-mains1Filter::placeholder {
+  color: rgb(167, 167, 167);
+  text-align: center;
+}
+
+.cebox-titlePb {
+  vertical-align: baseline;
+}
+
+.cebox-container-pb {
+  position: relative;
+  top: 10px;
+}
+
+.cebox-container-pb .cebox-main_crud {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  margin-left: 0%;
+}
+
+.cebox-button-title-pb {
+  text-decoration: none;
+  border: none;
+  background-color: white;
+}
+
+.cebox-button-title-pb:active {
+  background-color: #22ad1d;
+}
+.cebox-container-s1 {
+  display: inline;
+  padding-left: 25%;
+}
+
+.cebox-container-s1 .cebox-main_crud {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  margin-left: 25%;
+}
+
+.cebox-container-s2 {
+  display: inline;
+  padding-left: 50%;
+}
+
+.cebox-container-s2 .cebox-main_crud {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  margin-left: 50%;
+}
+
+.cebox-fleche {
+  position: relative;
+  top: 13px;
+  background: url("Aroow.png") no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.cebox-fleche:active {
+  background-color: #22ad1d;
+  border-radius: 25px;
+}
+
+.cebox-ecrou {
+  position: relative;
+  top: 13px;
+  background: url("ecrou.png") no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+}
+
+::placeholder {
+  color: white;
+  font-size: 1.5em;
+}
+
+.cebox-add {
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-size: small;
+}
+
+.cebox-solution {
+  padding-top: 25px;
+}
+
+.cebox-position-pdf {
+  position: absolute;
+  top: 163px;
+  left: 52%;
+  right: 5px;
+  bottom: 10px;
+}
+
+.cebox-main-create {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.cebox-file-size {
+  color: red;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.cebox-formUpload {
+  display: flex;
+}
+
+.cebox-inputUpload {
+  max-width: 70%;
+  color: black;
+  background-color: rgb(181, 245, 179);
+  border-radius: 10px;
+}
+
+.cebox-submitUpload {
+  background-color: rgb(179, 245, 179);
+  border-left: 1px solid black;
+  border-radius: 10px;
+}
+/* FIN CSS CEBOX  */
+
+input[type="file"]::file-selector-button {
+  border: 2px solid #fff7cc;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #fccee7;
+  transition: 1s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #ff707cf1;
+  border: 2px solid #ff707cf1;
+  border-radius: 10px;
+}
+
+html,
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-evenly;
+  color: black;
+  background-color: #777777;
+  font-size: 18px;
+  padding: 20px;
+}

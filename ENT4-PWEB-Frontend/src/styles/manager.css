@@ -1,0 +1,220 @@
+/* ADMIN PAGE */
+.admin-container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+.admin-container-g {
+  width: 25%;
+}
+
+.admin-container-g h1 {
+  text-align: center;
+}
+
+.admin-container-d {
+  width: 75%;
+  margin-top: 5.5%;
+  margin-right: 10%;
+  justify-content: start;
+}
+
+/* INFO */
+.manager-info {
+  background-color: #6e6e6e;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  margin: 0px auto;
+  border: 1px solid black;
+}
+
+.manager-user-info {
+  color: white;
+  background-color: #6e6e6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  flex: 20%;
+  border-right: 1px solid black;
+}
+
+.manager-roles-info {
+  color: white;
+  flex-grow: 0.5;
+  flex: 86%;
+  background-color: #6e6e6e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.manager-del-user-info {
+  background-color: #6e6e6e;
+  border: 1px solid black;
+  width: 30%;
+  color: white;
+  text-align: center;
+}
+/* INFO FIN */
+.manager-container {
+  margin: 0px 0%;
+}
+
+.manager {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  height: 75px;
+  margin: 0px auto;
+  border: 1px solid black;
+}
+
+.manager-user {
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  flex: 20%;
+  border-right: 1px solid black;
+}
+
+.manager-roles {
+  flex: 80%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+  margin: 0px 30px;
+}
+
+.manager-admin {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  height: 75px;
+  margin: 0px auto;
+  border: 1px solid black;
+}
+
+.manager-user-admin {
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  flex: 17%;
+  border-right: 1px solid black;
+}
+
+.manager-roles-admin {
+  flex: 80%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+  margin: 0px 30px;
+}
+.manager-roles-child-admin {
+  width: 20%;
+  text-align: center;
+}
+.manager-roles-child {
+  width: 20%;
+  text-align: center;
+}
+
+.manager-del-user {
+  background-color: rgb(255, 143, 143);
+  border: 1px solid black;
+  width: 15%;
+}
+
+.manager-mod-user {
+  background-color: rgb(143, 255, 152);
+  border: 1px solid black;
+  width: 15%;
+}
+
+.manager-del-user-admin {
+  background-color: #f7f7f7;
+
+  width: 15%;
+  display: flex;
+  margin: auto;
+}
+
+.update-roles {
+  border: 1px solid black;
+  background-color: #d7ffd0;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+.update-roles-child {
+  width: auto;
+  display: flex;
+  font-size: larger;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.update-roles-child-1 {
+  width: 30%;
+  display: flex;
+  align-items: baseline;
+  padding-top: 10px;
+  justify-content: center;
+}
+
+.update-roles-child-box {
+  margin: 0px 10px;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+}
+
+input[type="checkbox"]:checked {
+  background-color: rgb(0, 0, 0);
+  display: grid;
+  place-content: center;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
