@@ -53,11 +53,11 @@ function Searche({ techno }) {
     if (searched !== "") {
       axios
         .get(
-          `https://${IpBackend}/extract-text/${techno}/${searched}`
+          `https://${IpBackend}/extract-text/${techno}`, {params: {search : searched},}
         )
         .then((res) => {
           if (res.data.length === 0) {
-            setDefaulte("Aucun article trouv√©...");
+            setDefaulte("Aucun article trouv√ ou recherche invalide.");
             timesRun = 1;
           } else {
             setDefaulte("");

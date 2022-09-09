@@ -5,7 +5,7 @@ import { IpBackend, PortBackend } from "./ip.backend";
 function Uploader({ id, from, techno }) {
   const [selectedFile, setSelectedFile] = useState();
   const [message, setMessage] = useState("");
-
+  const [messageB, setMessageB] = useState("");
   function changeHandler(event) {
     setSelectedFile(event.target.files[0]);
   }
@@ -26,6 +26,13 @@ function Uploader({ id, from, techno }) {
           `https://${IpBackend}/upload-avatar/${techno}/${id}&${from}`,
           formData
         )
+	.then((res) => {
+	setMessageB("Fichier uplodé")
+	setTimeout(() => {
+	setMessageB("")
+	}, 3000)
+
+	})
         .catch((e) => {
           console.error("Error-UPDATER", e);
         });
@@ -54,7 +61,8 @@ function Uploader({ id, from, techno }) {
         <input className={techno + "-submitUpload"} type="submit" />
       </form>
       {message && <div className="alert alert-danger">{message}</div>}
-    </div>
+      {messageB && <div className="alert alert-success">{messageB}</div>}
+   </div>
   );
 }
 

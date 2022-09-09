@@ -26,13 +26,13 @@ exports.signup = (req, res) => {
           },
         }).then((roles) => {
           user.setRoles(roles).then(() => {
-            res.send({ message: "User registered successfully!" });
+            res.send({ message: "Utilisateur crÃÃ avec succÃs!" });
           });
         });
       } else {
         // user role = 1
         user.setRoles([1]).then(() => {
-          res.send({ message: "User registered successfully!" });
+          res.send({ message: "Utilisateur crÃÃ avec succÃs!" });
         });
       }
     })
@@ -49,7 +49,7 @@ exports.signin = (req, res) => {
   })
     .then((user) => {
       if (!user) {
-        return res.status(404).send({ message: "User Not found." });
+        return res.status(404).send({ message: "Utilisateur introuvable." });
       }
 
       var passwordIsValid = bcrypt.compareSync(
@@ -60,7 +60,7 @@ exports.signin = (req, res) => {
       if (!passwordIsValid) {
         return res.status(401).send({
           accessToken: null,
-          message: "Invalid Password!",
+          message: "Mot de passe invalide!",
         });
       }
       // REFRESH TOKEN

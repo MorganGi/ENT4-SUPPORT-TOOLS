@@ -63,8 +63,9 @@ const Pb = dbArbre.pb;
 const S1 = dbArbre.s1;
 const S2 = dbArbre.s2;
 const Solutions = dbArbre.solutions;
-
-db.sequelize.sync({ force: true });
+//Agit sur la base de donné des authentifications / Comptes
+db.sequelize.sync({ force: false });
+//Agit sur la base de donn�es des FAQ
 dbArbre.sequelize.sync({ force: false });
 //FORCE TRUE = CREE UNE NOUVELLE TABLE; FORCE FALSE = TABLE INCHANGÉ ; ALTER = AJOUT DES NOUVELLE CHOSES
 // set port, listen for requests
@@ -143,7 +144,7 @@ app.get("/api/", (req, resu) => {
         axios.post(`https://support-tools.avencall.com/api/auth/signup`, {
           username: "admin",
           email: "admin@admin.com",
-          password: "admin",
+          password: "Avencall2022",
           roles: ["user", "xivo", "cebox", "admin"],
         });
         Start.update({ started: 1 }, { where: { id: 1 } });
@@ -553,7 +554,7 @@ app.delete("/api/delete/:id&:db&:champ", (req, resu) => {
 });
 
 // RECHERCHER DU TEXT DANS UN PDF
-app.get("/api/extract-text/:techno/:searched", (req, resu) => {
+app.get("/api/extract-text/:techno", (req, resu) => {
   // RAJOUT TECHNO
   pool.getConnection().then((conn) => {
     conn
@@ -594,12 +595,20 @@ app.get("/api/extract-text/:techno/:searched", (req, resu) => {
                 varTab = [];
                 varTab2 = [];
                 varBool = textLower.includes(
-                  req.params.searched.toLocaleLowerCase()
+                  req.query.search.toLocaleLowerCase()
                 );
 
+	     try{
                 for (let i = 0; i < textSplited.length; i++) {
+                  if (!searchTitle && varTab2.length === 0) {
+                    textparsed = textSplited[i].search("[a-z]");
+                    if (textparsed !== -1) {
+                      varTitle = textSplited[i];
+                      searchTitle = !searchTitle;
+                    }
+                  }
                   textparsed = textSplited[i].search(
-                    req.params.searched.toLocaleLowerCase()
+                    req.query.search.toLocaleLowerCase()
                   );
                   if (textparsed !== -1) {
                     flag = false;
@@ -621,22 +630,17 @@ app.get("/api/extract-text/:techno/:searched", (req, resu) => {
                       varTab = [];
                     }
                   }
-                  if (!searchTitle && varTab2.length !== 0) {
-                    textparsed = textSplited[i].search("[a-z]");
-                    if (textparsed !== -1) {
-                      varTitle = textSplited[i];
-                      searchTitle = !searchTitle;
-                    }
-                  }
                 }
-
+		} catch (error){
+		console.log(error);
+		}	
                 var filtered = varTab2.filter(function (el) {
                   return el != null;
                 });
-                final = filtered.join(" AAA ");
+                finaltext = filtered.join(" AAA ");
                 if (varTab2.length !== 0) {
                   tab.push({
-                    text: final,
+                    text: finaltext,
                     titre: file,
                     titredoc: varTitle,
                   });
